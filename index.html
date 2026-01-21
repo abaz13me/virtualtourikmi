@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Tour Kampus - Interaktif</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5/index.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Jelajah Kampus Virtual</h1>
+        <p>Geser gambar untuk melihat sekeliling 360°</p>
+      </header>
+
+      <div class="info-panel">
+        <h2 id="location-title">Gerbang</h2>
+        <p id="location-desc">Pintu masuk utama kampus STMIK IKMI.</p>
+      </div>
+
+      <div class="viewer-wrapper">
+        <div id="viewer"></div>
+
+        <div class="nav-overlay">
+          <button
+            class="btn-nav active"
+            onclick="
+              loadScene(
+                'tour1.jpg',
+                'Gerbang',
+                'Pintu Masuk STMIK IKMI Cirebon',
+                this,
+              )
+            "
+          >
+            Gerbang
+          </button>
+
+          <button
+            class="btn-nav"
+            onclick="
+              loadScene(
+                'tour2.jpg',
+                'POS Satpam',
+                'POS Satpam STMIK IKMI Cirebon yang menjaga keamanan lingkungan kampus.',
+                this,
+              )
+            "
+          >
+            POS Satpam
+          </button>
+
+          <button
+            class="btn-nav"
+            onclick="
+              loadScene(
+                'tour3.jpg',
+                'R. Front Office',
+                'Ruangan Front Office yang melayani kebutuhan mahasiswa.',
+                this,
+              )
+            "
+          >
+            R. FO
+          </button>
+
+          <button
+            class="btn-nav"
+            onclick="
+              loadScene(
+                'tour4.jpg',
+                'Halaman Kampus',
+                'Area halaman tengah tempat kegiatan mahasiswa.',
+                this,
+              )
+            "
+          >
+            Halaman
+          </button>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; 2026 Virtual Tour STMIK IKMI. Created by Abdul Azis.</p>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5/index.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

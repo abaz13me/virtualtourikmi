@@ -1,0 +1,134 @@
+/* Reset Dasar */
+body {
+  font-family: "Poppins", sans-serif;
+  /* BACKGROUND BARU: Gradient Biru Muda agar nuansa akademik */
+  background: linear-gradient(135deg, #e0f7fa 0%, #e8eaf6 100%);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh; /* Agar background memenuhi layar */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+/* Panel Informasi Lokasi */
+.info-panel {
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-left: 5px solid #007bff; /* Warna biru khas link/tombol */
+  border-radius: 5px;
+  animation: fadeIn 0.5s;
+}
+
+.info-panel h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #007bff;
+}
+
+/* Wrapper Viewer */
+.viewer-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px; /* Jarak ke footer */
+}
+
+#viewer {
+  width: 100%;
+  height: 550px;
+}
+
+/* Navigasi Mengambang */
+.nav-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.85); /* Sedikit lebih solid */
+  padding: 10px 20px;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  width: max-content; /* Agar lebar menyesuaikan tombol */
+}
+
+.btn-nav {
+  border: none;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-nav:hover {
+  background-color: #ecf0f1;
+  transform: translateY(-2px);
+}
+
+.btn-nav.active {
+  background-color: #007bff; /* Biru */
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+/* TAMBAHAN: Style Footer */
+footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 600px) {
+  #viewer {
+    height: 400px;
+  }
+  .nav-overlay {
+    width: 90%;
+    flex-wrap: wrap; /* Tombol turun ke bawah jika layar sempit */
+    justify-content: center;
+    border-radius: 15px;
+  }
+}
